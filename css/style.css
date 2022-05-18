@@ -36,13 +36,12 @@ body {
     .profilePic {
         display: none;
     }
+    #myBtn {
+        display: none;
+    }
 }
 
-.logo {
-    width: 90%;
-    height: 30rem;
-    margin: 1rem;
-}
+
 
 /*NAV Start*/
 .nav .nav-link:hover {
@@ -87,14 +86,14 @@ body {
     border-radius: 10px;
 }
 
-/* NAV on Mobile 
+/* Reduced NAV on Mobile */
 @media (max-width: 600px) {
     .toggle-button {
         display: flex;
     }
     .nav-link {
-        position: sticky
-        /*display: none;
+        position: sticky;
+        display: none;
     }
     .nav {
         flex-direction: column;
@@ -102,14 +101,14 @@ body {
      .nav-link li {
          width: 100%;
      }
-}*/
+}
 /*NAV End*/
 
 .full-height {
     height: 100%;
 }
 
-.portfolio {
+.info {
     text-decoration: underline #D0E156;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -129,7 +128,7 @@ body {
 }
 
 section {
-    margin: 2rem; /*adjust this*/
+    margin: 2rem;
 }
 
 h1 {
@@ -150,6 +149,28 @@ p {
 span {
     text-align: center;
 }
+
+#myBtn {
+    /*display: none;  Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 5px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #0b0633; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    opacity: 0.5;
+  }
+  
+  #myBtn:hover {
+    background-color: #D0E156; /* Add a dark-grey background on hover */
+  }
+
 
 /*.progress {
     position: relative;
