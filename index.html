@@ -55,13 +55,13 @@
                       <a class="nav-link active" aria-current="page" href="#profile">Profile</a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -152,28 +152,25 @@
                     </div>
                 </section>
 
+                <!--Contact Form-->
                 <section id="contact">
                     <h2 class="display-6">Feel free to get in touch!</h2>
-                    <div class="container-fluid">
-                        <div class="row gy-5">
-                          <div class="form">  
-                            <form>
-                              <h2 class="sent-notification"></h2>
-                              <label>Name</label>
-                              <input id="name" type="text" placeholder="Enter Name">
-                              <br><br>
-                              <label>Email</label>
-                              <input id="email" type="text" placeholder="Enter Email">
-                              <br><br>
-                              <label>Subject</label>
-                              <input id="subject" type="text" placeholder="Enter Subject">
-                              <br><br>
-                              <textarea id="body" rows="5" placeholder="Enter Message"></textarea>
-                              <button type="button" onclick="sendEmail()" value="Send Email" class="btn btn-primary btn-sm">Send Email</button>
-                            </form>
-                          </div>
+                    <div class="container">
+                      <p>Feel free to dropm an email with any questions you may have!</p>
+                      <form action="mail.php" method="POST">
+                          <label for="name">Name:</label>
+                          <input type="text" name="name" id="name">
+                          <label for="email">Email:</label>
+                          <input type="text" name="email" id="email">
+                          <label for="subject">Subject:</label>
+                          <input type="text" name="subject" id="subject">
+                          <label for="message">Message:</label>
+                          <textarea name="message" cols="30" rows="5"></textarea>
+                          <input type="submit" value="Send Email">
+                      </form>
+                  </div>
 
-                            <a href="https://www.linkedin.com/in/samuel-jeffers-090702133/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="skill_img"/></a>
+                            <a href="https://www.linkedin.com/in/samuel-jeffers-090702133/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="skill_img" id="linkedin"/></a>
                       
                         <!--<a href="https://github.com/SamLJeffers"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" class="skill_img"/></a>-->
                           </div>

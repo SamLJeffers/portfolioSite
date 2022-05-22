@@ -113,6 +113,7 @@ body {
         max-width: 100%;
         height: 250px;
     }
+    
 }
 /*NAV End*/
 
@@ -124,7 +125,7 @@ body {
 }
 
 .info {
-    text-decoration: underline x;
+    text-decoration: underline #D0E156;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -165,6 +166,7 @@ span {
     text-align: center;
 }
 
+/*Back to Top Button*/
 .to-top {
     background-color: #D0E156;
     position: fixed;
@@ -190,20 +192,86 @@ span {
     opacity: 0.5;
 }
 
-div.form {
-    display: block;
-    text-align: center;
+p,input,textarea,label {
+     color: #0b0633
 }
 
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/*Form*/
 form {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 700px;
+    margin: 0 auto;
     text-align: left;
+    padding: 30px 0;
+}
+
+input,textarea, label {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    color: #0b0633;
+}
+
+input,textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #0b0633;
+}
+
+input[type=submit] {
+    background-color: #0b0633;
+    padding: 15px;
+    color: #D0E156;
+    font-size: 18px;
+    border-bottom: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color:#D0E156;
+    padding: 15px;
+    color: #0b0633;
+    font-size: 18px;
+    border-bottom: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 1000ms;
+}
+
+input,textarea {
+    color: #0b0633;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+input:focus, textarea:focus {
+    outline: 1px solid #D0E156;
+}
+
+a {
+    color: #828282;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
 }
 
 textarea {
     margin-left: 100px;
+}
+
+/*Connect Links*/
+.contact-link {
+    margin: 0 auto;
+    width: 2rem;
+    height: 1;
+    margin: 1rem;
 }
 
 
