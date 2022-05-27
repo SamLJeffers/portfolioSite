@@ -44,89 +44,125 @@ body {
     }
 }
 
-
-
 /*NAV Start*/
-.nav .nav-link:hover {
-    color: #D0E156;
+
+.navbar {
+    float: right;
+    color:#0b0633;
 }
-.nav-link {
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+} 
+
+.navbar-links li a {
+    text-decoration: none;
     color: #0b0633;
+    padding: 1rem;
     font-weight: 400;
-    position: relative;
+    display: block;
 }
 
-.nav-link::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: '';
-    background-color: #0b0633;
-    width: 0%;
-    height: 2px;
+.navbar-links li a:hover {
+    border-bottom: 2px solid #D0E156;
 }
 
-.nav-link:hover::after {
-    width: 100%;
-}
-
+/*Mobile Nav*/
 .toggle-button {
+    color: white;
+    font-size: 50px;
     position: absolute;
-    top: .75rem;
+    bottom: 21rem;
     right: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 31px;
+    width: 30px;
     height: 21px;
+    text-decoration: none;
 }
 
 .toggle-button .bar {
     height: 3px;
     width: 100%;
     background-color: white;
-    border-radius: 10px;
+}
+.skill-logo {
+    text-align: center;
 }
 
-/* Reduced NAV on Mobile */
 @media (max-width: 600px) {
+    .panel-right {
+        margin: 0px;
+        padding: 0px;
+    }
+    .full-height {
+        top: 0% !important;
+    }
+
+    h1 {
+        text-decoration: underline #D0E156;
+        margin-top: 50px !important;
+        margin-bottom: 0px !important;
+    }
+
     .toggle-button {
         display: flex;
     }
-    .nav-link {
-        display: none;
+
+    .navbar-links {
         width: 100%;
+        display: none;
+        background-color: #0b0633;
     }
+
     .navbar {
+       padding-top: 5px;
+        height: 10px;
+        background-color: #0b0633;
+        float: none;
         flex-direction: column;
         align-items: flex-start;
-     }
-     .nav-link ul {
-         flex-direction: column;
-         width: 100%;
-     }
-     .nav-link li {
-         width: 100%;
-     }
-     .img-fluid {
-        max-width: 100%;
-        height: 250px;
     }
-    
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links {
+        text-align: center;
+    }
+
+    .navbar-links li  a {
+        align-items: center;
+        color: white;
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
 }
+
 /*NAV End*/
 
 .full-height {
     width: 100%;
     position: absolute;
     left: 0px;
-    top: 15%;
+    top: 30%;
 }
 
 .info {
     text-decoration: underline #D0E156;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
 }
 .profilePic {
@@ -192,6 +228,11 @@ span {
     opacity: 0.5;
 }
 
+a:hover {
+    color: white;
+}
+
+/*Form*/
 p,input,textarea,label {
      color: #0b0633
 }
@@ -202,7 +243,6 @@ p,input,textarea,label {
     margin-bottom: 20px;
 }
 
-/*Form*/
 form {
     max-width: 700px;
     margin: 0 auto;
@@ -225,22 +265,23 @@ input,textarea {
 
 input[type=submit] {
     background-color: #0b0633;
-    padding: 15px;
+    padding:4px;
     color: #D0E156;
-    font-size: 18px;
+    font-size: 1.5remx;
     border-bottom: none;
     margin-top: 20px;
     cursor: pointer;
+
 }
 input[type=submit]:hover {
     background-color:#D0E156;
-    padding: 15px;
+    padding: 4px;
     color: #0b0633;
-    font-size: 18px;
+    font-size: 1.5rem;
     border-bottom: none;
     margin-top: 20px;
     cursor: pointer;
-    transition: 1000ms;
+    transition: 500ms;
 }
 
 input,textarea {
@@ -253,25 +294,30 @@ input:focus, textarea:focus {
     outline: 1px solid #D0E156;
 }
 
-a {
-    color: #828282;
-    text-decoration: none;
-}
-
-a:hover {
-    color: white;
-}
-
-textarea {
-    margin-left: 100px;
-}
+/*FORM END*/
 
 /*Connect Links*/
-.contact-link {
-    margin: 0 auto;
-    width: 2rem;
-    height: 1;
-    margin: 1rem;
+
+.connect {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.connect-img, .connect-img2 {
+    padding: 0 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5rem;
+}
+
+.connect-img:hover {
+    transform: rotate(-15deg);
+}
+.connect-img2:hover {
+    transform: rotate(15deg);
 }
 
 
