@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     height: 100%;
 }
 
@@ -24,95 +25,156 @@ body {
         position: relative;
         width: 100%;
     }
+
     .name {
         display: none;
     }
+
     .portfolio {
         display: none;
     }
+
     .display-6 {
         font-weight: 500;
     }
+
     .profilePic {
         display: none;
     }
+
     #myBtn {
+        display: none;
+    }
+
+    label {
         display: none;
     }
 }
 
-
-
 /*NAV Start*/
-.nav .nav-link:hover {
-    color: #D0E156;
-}
-.nav-link {
+
+.navbar {
+    float: right;
     color: #0b0633;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #0b0633;
+    padding: 1rem;
     font-weight: 400;
-    position: relative;
+    display: block;
 }
 
-.nav-link::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: '';
-    background-color: #0b0633;
-    width: 0%;
-    height: 2px;
+.navbar-links li a:hover {
+    border-bottom: 2px solid #D0E156;
 }
 
-.nav-link:hover::after {
-    width: 100%;
-}
-
+/*Mobile Nav*/
 .toggle-button {
+    color: white;
+    font-size: 50px;
     position: absolute;
-    top: .75rem;
+    bottom: 20rem;
     right: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 31px;
+    width: 30px;
     height: 21px;
+    text-decoration: none;
 }
 
 .toggle-button .bar {
     height: 3px;
     width: 100%;
     background-color: white;
-    border-radius: 10px;
 }
 
-/* Reduced NAV on Mobile */
+.skill-logo {
+    text-align: center;
+}
+
 @media (max-width: 600px) {
+    .panel-right {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .full-height {
+        top: 0% !important;
+    }
+
+    h1 {
+        text-decoration: underline #D0E156;
+        margin-top: 50px !important;
+        margin-bottom: 0px !important;
+    }
+
     .toggle-button {
         display: flex;
     }
-    .nav-link {
-        position: sticky;
+
+    .navbar-links {
+        width: 100%;
         display: none;
+        background-color: #0b0633;
     }
-    .nav {
+
+    .navbar {
+        padding-top: 5px;
+        height: 15px;
+        background-color: #0b0633;
+        float: none;
         flex-direction: column;
-     }
-     .nav-link li {
-         width: 100%;
-     }
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        align-items: center;
+        color: white;
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
 }
+
 /*NAV End*/
 
 .full-height {
-    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 30%;
 }
 
 .info {
     text-decoration: underline #D0E156;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
 }
+
 .profilePic {
     float: right;
     width: 20%;
@@ -121,14 +183,19 @@ body {
     margin: 1rem;
 }
 
+.card {
+    display: inline-block;
+    align-items: center;
+}
+
 .skill_img {
-    width: 6.9rem;
-    height: 10rem;
+    width: 5rem;
+    height: 6rem;
     margin: 1rem;
 }
 
 section {
-    margin: 2rem;
+    margin: 2.5rem;
 }
 
 h1 {
@@ -150,26 +217,145 @@ span {
     text-align: center;
 }
 
-#myBtn {
-    /*display: none;  Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 5px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #0b0633; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+/*Back to Top Button*/
+.to-top {
+    background-color: #D0E156;
+    position: fixed;
+    bottom: 16px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #0b0633;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
     opacity: 0.5;
-  }
-  
-  #myBtn:hover {
-    background-color: #D0E156; /* Add a dark-grey background on hover */
-  }
+}
+
+a:hover {
+    color: white;
+}
+
+.card:hover {
+    transition: 0.3s;
+    transform: scale(1.013);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+/*Form*/
+p,
+input,
+textarea,
+label {
+    color: #0b0633
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 30px 0;
+}
+
+input,
+textarea,
+label {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    color: #0b0633;
+}
+
+input,
+textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #0b0633;
+}
+
+input[type=submit] {
+    background-color: #0b0633;
+    padding: 4px;
+    color: #D0E156;
+    font-size: 1.5remx;
+    border-bottom: none;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+    background-color: #D0E156;
+    padding: 4px;
+    color: #0b0633;
+    font-size: 1.5rem;
+    border-bottom: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+input,
+textarea {
+    color: #0b0633;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid #D0E156;
+}
+
+/*FORM END*/
+
+/*Connect Links*/
+
+.connect {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.connect-img,
+.connect-img2 {
+    padding: 0 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5rem;
+
+}
+
+.connect-img:hover,
+.connect-img2:hover {
+    transform: scale(1.2);
+    transition: all 400ms ease-in-out;
+}
+
+footer p {
+    float: right;
+}
+
 
 
 /*.progress {
