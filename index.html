@@ -128,12 +128,13 @@
             <div class="skill-logo">
               <p>I have developed knowledge in many different programming languages during my Full Stack Engineer
                 course, some of them are displayed below.</p>
-              <div class="card text-center shadow p-3 mb-2 l-white rounded" style="width: 20rem;" style="width: 18rem;">
+              <div class="card text-center shadow p-3 mb-2 l-white rounded h-100" style="width: 20rem;"
+                style="width: 18rem;">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
                   class="skill_img" class="card-img-top" alt="HTML logo">
                 <div class="card-body">
                   <h5 class="card-title">HTML</h5>
-                  <p class="card-text">The first language I learnt and forms the basis of my front end work.</p>
+                  <p class="card-text">The first language I learnt and forms the basis of my front end development.</p>
                   <a href="/images/HTML Certificate.pdf" class="btn btn-primary">View Certificate</a>
                 </div>
               </div>
@@ -143,12 +144,14 @@
                   class="skill_img" class="card-img-top" alt="CSS logo">
                 <div class="card-body">
                   <h5 class="card-title">CSS</h5>
-                  <p class="card-text">Learnt along side HTML, another go to for front end work , with Bootstrap.</p>
+                  <p class="card-text">Learnt along side HTML, another go to for front end development.
+                  </p>
                   <a href="/images/CSS Int Certificate.pdf" class="btn btn-primary">View Certifcate</a>
                 </div>
               </div>
 
-              <div class="card text-center shadow p-3 mb-2 l-white rounded" style="width: 20rem;" style="width: 18rem;">
+              <div class="card text-center shadow p-3 mb-2 l-white rounded h-100" style="width: 20rem;"
+                style="width: 18rem;">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                   class="skill_img" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -205,6 +208,9 @@
                   <a href="/images/Full-Stack Engineer Certificate.pdf" class="btn btn-primary">View Certifcate</a>
                 </div>
               </div>
+              <div class="mtaCert">
+                <img src="/images/Microsoft_Certified_Professional_Certificate_0.pdf" alt="">
+              </div>
 
               <!--Should I include a progress bar ??   
                       <div class="progress">
@@ -235,15 +241,15 @@
           <h2 class="display-6">Feel free to get in touch!</h2>
           <div class="container">
             <p>Feel free to drop me an email with any questions you may have!</p>
-            <form action="mail.php" method="POST">
+            <form action="/php/mail.php" method="POST">
               <label for="name">Name:</label>
-              <input type="text" name="name" id="name">
+              <input type="text" name="name" id="name" required>
               <label for="email">Email:</label>
-              <input type="text" name="email" id="email">
+              <input type="email" name="email" id="email" required>
               <label for="subject">Subject:</label>
-              <input type="text" name="subject" id="subject">
+              <input type="text" name="subject" id="subject" required>
               <label for="message">Message:</label>
-              <textarea name="message" cols="30" rows="3"></textarea>
+              <textarea name="message" cols="30" rows="3" required></textarea>
               <input type="submit" value="Send Email">
             </form>
           </div>
@@ -309,7 +315,9 @@
       }
     </script>-->
   <footer>
-    <p>Website created by Samuel Jeffers 2022 | HMTL | CSS | JavaScript | PHP | Bootstrap</p>
+    <p>Website created by Samuel Jeffers 2022 <span>|</span> HMTL <span>|</span> CSS <span>|</span> JavaScript
+      <span>|</span> PHP <span>|</span> Bootstrap
+    </p>
   </footer>
 </body>
 
