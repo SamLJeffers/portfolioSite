@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-body,
+<<<<<<< HEAD body,
 html {
     height: 100%;
 }
@@ -234,7 +233,7 @@ span {
     text-decoration: none;
     opacity: 0;
     pointer-events: none;
-    transition: all .4s;
+    transition: all .3s;
 }
 
 .to-top.active {
