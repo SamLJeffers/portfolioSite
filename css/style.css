@@ -131,7 +131,8 @@ body {
     }
 
     .navbar {
-        padding: 0px;
+        padding-top: 5px;
+        height: 15px;
         background-color: #0b0633;
         float: none;
         flex-direction: column;

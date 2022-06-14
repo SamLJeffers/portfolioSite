@@ -5,26 +5,16 @@
 
             $message = " 
                 <b>Customer:</b>".$_POST['name']."<br>
-<<<<<<< HEAD
-                <b>Email:</b>".$_POST['email']."<br>     
-                <b>Message:</b>".$_POST['message']."<br>
-                ";
-=======
                 <b>Email:</b>".$_POST['email']."<br>
->>>>>>> 7091f54bc340f3278e55c1bbf3768b466350532e
                
 // Always set content-type when sending HTML email
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
             // More headers
             $headers .= 'From: <contactme@samueljeffers.co.uk>' . "\r\n";
-
 print $message;
 exit;
-
             mail($to,$subject,$message,$headers);
-
     }else{
         print "Please fill all the required fields";
     }
