@@ -5,9 +5,13 @@
 
             $message = " 
                 <b>Customer:</b>".$_POST['name']."<br>
+<<<<<<< HEAD
                 <b>Email:</b>".$_POST['email']."<br>     
                 <b>Message:</b>".$_POST['message']."<br>
                 ";
+=======
+                <b>Email:</b>".$_POST['email']."<br>
+>>>>>>> 7091f54bc340f3278e55c1bbf3768b466350532e
                
 // Always set content-type when sending HTML email
             $headers = "MIME-Version: 1.0" . "\r\n";
